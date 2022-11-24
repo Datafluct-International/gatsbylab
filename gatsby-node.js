@@ -38,7 +38,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   data.allContentfulBlogPost.nodes.forEach((item) => { // scan all items of blog post to create page (item)
 
     createPage({ // with each item, creating and routing to a page
-      path: item.slug, //path of deferred page
+      path: "/" + item.slug, //path of deferred page. MUST ADD slash before like this. If not, having error sometime. 
       component: require.resolve("./src/templates/using-dsg.js"), // template DSG page to fill data
       context: { post: item, $post: item }, // pass a context page property for each page
       // deffer property is marked to deffered page
