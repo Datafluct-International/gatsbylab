@@ -54,5 +54,15 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
+    // You can have multiple instances of this plugin
+    // to read source nodes from different locations on your
+    // filesystem.
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `slides`,
+        path: `${__dirname}/src/images/photos/`,
+      },
+    },
   ],
 }
