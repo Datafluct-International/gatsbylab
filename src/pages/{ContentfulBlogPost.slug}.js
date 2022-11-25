@@ -7,7 +7,8 @@ import Seo from "../components/seo";
 import { renderRichText } from 'gatsby-source-contentful/rich-text';
 
 const Post = (props) => {
-    //console.log(props);
+    console.log(props);
+
     return (
         <Layout>
             <h1>{props.data.allContentfulBlogPost.nodes[0].title}</h1>
@@ -15,6 +16,7 @@ const Post = (props) => {
         </Layout>
     );
 }
+// where does $slug come from? why does 'graphql' know about it?
 export const query = graphql`
     query MyQuery ($slug: String){
         allContentfulBlogPost ( # this type is used to name for file
@@ -32,7 +34,7 @@ export const query = graphql`
         }
     }
 `;
-
-export const Head = () => <Seo title="Post" />
+// every function can use 'props' as parameter
+export const Head = (props) => <Seo title={props.data.allContentfulBlogPost.nodes[0].title} />
 
 export default Post;
