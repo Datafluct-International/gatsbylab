@@ -1,0 +1,2 @@
+This folder is not a required for Gatsby. But, developers often use it to keep files used for DSG.
+The importance of DSG is how to use gatsby-node.js with createPage API routing to pass context variables to these template files.
