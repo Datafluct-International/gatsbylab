@@ -4,7 +4,7 @@ import { Hero } from "../../components/heroImage.js";
 import Seo from "../../components/seo";
 import Layout from "../../components/layout.js";
 // import Swiper core and required modules
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Navigation, Pagination, Scrollbar } from 'swiper';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
@@ -32,7 +32,7 @@ const IndexCompany = ({ data }) => { //step 3: rather use props, this uses { dat
         navigation={true}
         pagination={{ clickable: true }}
         //scrollbar={{ draggable: true }}
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
+        modules={[Navigation, Pagination, Scrollbar]}
         //onSwiper={(swiper) => console.log(swiper)}
         //onSlideChange={() => console.log('slide change')}
         className="mySwiper"
